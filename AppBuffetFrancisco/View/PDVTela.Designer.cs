@@ -29,37 +29,38 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(PDVTela));
-            DataGridViewCellStyle dataGridViewCellStyle2 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle1 = new DataGridViewCellStyle();
             btn_coxinha = new Button();
             btn_esfiha = new Button();
             btn_pastel = new Button();
             btn_suco = new Button();
             btn_refrigerante = new Button();
             groupBox1 = new GroupBox();
-            groupBox2 = new GroupBox();
             btn_bolinhodequeijo = new Button();
             button1 = new Button();
+            groupBox2 = new GroupBox();
             button2 = new Button();
             pictureBox1 = new PictureBox();
             label1 = new Label();
             label2 = new Label();
-            label3 = new Label();
+            lbl_ValorTotal = new Label();
             btn_cancelar = new Button();
             btn_rf = new Button();
-            numericUpDown1 = new NumericUpDown();
+            txb_qtde = new NumericUpDown();
             label4 = new Label();
             label5 = new Label();
-            textBox1 = new TextBox();
+            txb_codigo = new TextBox();
             dataGridView1 = new DataGridView();
             Produtos = new DataGridViewTextBoxColumn();
             Qtde = new DataGridViewTextBoxColumn();
             Unitário = new DataGridViewTextBoxColumn();
             Total = new DataGridViewTextBoxColumn();
             btn_adicionar = new Button();
+            btn_limpar = new Button();
             groupBox1.SuspendLayout();
             groupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)numericUpDown1).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)txb_qtde).BeginInit();
             ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
             SuspendLayout();
             // 
@@ -72,6 +73,7 @@
             btn_coxinha.Size = new Size(72, 60);
             btn_coxinha.TabIndex = 2;
             btn_coxinha.UseVisualStyleBackColor = true;
+            btn_coxinha.Click += btn_coxinha_Click;
             // 
             // btn_esfiha
             // 
@@ -82,6 +84,7 @@
             btn_esfiha.Size = new Size(83, 60);
             btn_esfiha.TabIndex = 3;
             btn_esfiha.UseVisualStyleBackColor = true;
+            btn_esfiha.Click += btn_esfiha_Click;
             // 
             // btn_pastel
             // 
@@ -92,6 +95,7 @@
             btn_pastel.Size = new Size(83, 60);
             btn_pastel.TabIndex = 4;
             btn_pastel.UseVisualStyleBackColor = true;
+            btn_pastel.Click += btn_pastel_Click;
             // 
             // btn_suco
             // 
@@ -102,6 +106,7 @@
             btn_suco.Size = new Size(83, 60);
             btn_suco.TabIndex = 5;
             btn_suco.UseVisualStyleBackColor = true;
+            btn_suco.Click += btn_suco_Click;
             // 
             // btn_refrigerante
             // 
@@ -112,6 +117,7 @@
             btn_refrigerante.Size = new Size(83, 60);
             btn_refrigerante.TabIndex = 6;
             btn_refrigerante.UseVisualStyleBackColor = true;
+            btn_refrigerante.Click += btn_refrigerante_Click;
             // 
             // groupBox1
             // 
@@ -121,12 +127,34 @@
             groupBox1.Controls.Add(btn_esfiha);
             groupBox1.Controls.Add(btn_pastel);
             groupBox1.Font = new Font("Segoe UI Black", 9F, FontStyle.Bold, GraphicsUnit.Point);
+            groupBox1.ForeColor = SystemColors.ActiveCaptionText;
             groupBox1.Location = new Point(12, 159);
             groupBox1.Name = "groupBox1";
             groupBox1.Size = new Size(493, 100);
             groupBox1.TabIndex = 7;
             groupBox1.TabStop = false;
             groupBox1.Text = "Salgados";
+            // 
+            // btn_bolinhodequeijo
+            // 
+            btn_bolinhodequeijo.BackgroundImage = (Image)resources.GetObject("btn_bolinhodequeijo.BackgroundImage");
+            btn_bolinhodequeijo.Font = new Font("Segoe UI Black", 9F, FontStyle.Bold | FontStyle.Italic, GraphicsUnit.Point);
+            btn_bolinhodequeijo.Location = new Point(393, 22);
+            btn_bolinhodequeijo.Name = "btn_bolinhodequeijo";
+            btn_bolinhodequeijo.Size = new Size(83, 60);
+            btn_bolinhodequeijo.TabIndex = 5;
+            btn_bolinhodequeijo.UseVisualStyleBackColor = true;
+            btn_bolinhodequeijo.Click += btn_bolinhodequeijo_Click;
+            // 
+            // button1
+            // 
+            button1.Font = new Font("Segoe UI Black", 9F, FontStyle.Bold | FontStyle.Italic, GraphicsUnit.Point);
+            button1.Location = new Point(234, 163);
+            button1.Name = "button1";
+            button1.Size = new Size(83, 60);
+            button1.TabIndex = 6;
+            button1.Text = "Refrigerante";
+            button1.UseVisualStyleBackColor = true;
             // 
             // groupBox2
             // 
@@ -141,26 +169,6 @@
             groupBox2.TabStop = false;
             groupBox2.Text = "Bebidas";
             // 
-            // btn_bolinhodequeijo
-            // 
-            btn_bolinhodequeijo.BackgroundImage = (Image)resources.GetObject("btn_bolinhodequeijo.BackgroundImage");
-            btn_bolinhodequeijo.Font = new Font("Segoe UI Black", 9F, FontStyle.Bold | FontStyle.Italic, GraphicsUnit.Point);
-            btn_bolinhodequeijo.Location = new Point(393, 22);
-            btn_bolinhodequeijo.Name = "btn_bolinhodequeijo";
-            btn_bolinhodequeijo.Size = new Size(83, 60);
-            btn_bolinhodequeijo.TabIndex = 5;
-            btn_bolinhodequeijo.UseVisualStyleBackColor = true;
-            // 
-            // button1
-            // 
-            button1.Font = new Font("Segoe UI Black", 9F, FontStyle.Bold | FontStyle.Italic, GraphicsUnit.Point);
-            button1.Location = new Point(234, 163);
-            button1.Name = "button1";
-            button1.Size = new Size(83, 60);
-            button1.TabIndex = 6;
-            button1.Text = "Refrigerante";
-            button1.UseVisualStyleBackColor = true;
-            // 
             // button2
             // 
             button2.Font = new Font("Segoe UI Black", 9F, FontStyle.Bold | FontStyle.Italic, GraphicsUnit.Point);
@@ -170,6 +178,7 @@
             button2.Size = new Size(83, 60);
             button2.TabIndex = 7;
             button2.UseVisualStyleBackColor = true;
+            button2.Click += button2_Click;
             // 
             // pictureBox1
             // 
@@ -195,33 +204,34 @@
             // 
             label2.AutoSize = true;
             label2.Font = new Font("Segoe UI Black", 11.25F, FontStyle.Bold | FontStyle.Italic, GraphicsUnit.Point);
-            label2.Location = new Point(606, 355);
+            label2.Location = new Point(804, 360);
             label2.Name = "label2";
             label2.Size = new Size(91, 20);
             label2.TabIndex = 11;
             label2.Text = "Valor Total";
             label2.Click += label2_Click_1;
             // 
-            // label3
+            // lbl_ValorTotal
             // 
-            label3.BackColor = Color.Silver;
-            label3.Font = new Font("Segoe UI", 11.25F, FontStyle.Italic, GraphicsUnit.Point);
-            label3.Location = new Point(908, 357);
-            label3.Name = "label3";
-            label3.Size = new Size(100, 23);
-            label3.TabIndex = 12;
-            label3.Text = "R$ 0,0";
-            label3.TextAlign = ContentAlignment.TopRight;
+            lbl_ValorTotal.BackColor = Color.Silver;
+            lbl_ValorTotal.Font = new Font("Segoe UI", 11.25F, FontStyle.Italic, GraphicsUnit.Point);
+            lbl_ValorTotal.Location = new Point(908, 360);
+            lbl_ValorTotal.Name = "lbl_ValorTotal";
+            lbl_ValorTotal.Size = new Size(100, 23);
+            lbl_ValorTotal.TabIndex = 12;
+            lbl_ValorTotal.Text = "R$ 0,0";
+            lbl_ValorTotal.TextAlign = ContentAlignment.TopRight;
             // 
             // btn_cancelar
             // 
             btn_cancelar.Font = new Font("Segoe UI", 11.25F, FontStyle.Italic, GraphicsUnit.Point);
-            btn_cancelar.Location = new Point(633, 407);
+            btn_cancelar.Location = new Point(606, 407);
             btn_cancelar.Name = "btn_cancelar";
             btn_cancelar.Size = new Size(116, 31);
             btn_cancelar.TabIndex = 13;
             btn_cancelar.Text = "Cancelar";
             btn_cancelar.UseVisualStyleBackColor = true;
+            btn_cancelar.Click += btn_cancelar_Click;
             // 
             // btn_rf
             // 
@@ -232,13 +242,14 @@
             btn_rf.TabIndex = 14;
             btn_rf.Text = "Receber e Finalizar";
             btn_rf.UseVisualStyleBackColor = true;
+            btn_rf.Click += btn_rf_Click;
             // 
-            // numericUpDown1
+            // txb_qtde
             // 
-            numericUpDown1.Location = new Point(839, 159);
-            numericUpDown1.Name = "numericUpDown1";
-            numericUpDown1.Size = new Size(36, 23);
-            numericUpDown1.TabIndex = 16;
+            txb_qtde.Location = new Point(839, 159);
+            txb_qtde.Name = "txb_qtde";
+            txb_qtde.Size = new Size(36, 23);
+            txb_qtde.TabIndex = 16;
             // 
             // label4
             // 
@@ -260,24 +271,24 @@
             label5.TabIndex = 18;
             label5.Text = "Qtde";
             // 
-            // textBox1
+            // txb_codigo
             // 
-            textBox1.Location = new Point(672, 160);
-            textBox1.Name = "textBox1";
-            textBox1.Size = new Size(100, 23);
-            textBox1.TabIndex = 19;
+            txb_codigo.Location = new Point(672, 160);
+            txb_codigo.Name = "txb_codigo";
+            txb_codigo.Size = new Size(100, 23);
+            txb_codigo.TabIndex = 19;
             // 
             // dataGridView1
             // 
             dataGridView1.BackgroundColor = SystemColors.ButtonFace;
-            dataGridViewCellStyle2.Alignment = DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle2.BackColor = SystemColors.Control;
-            dataGridViewCellStyle2.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point);
-            dataGridViewCellStyle2.ForeColor = SystemColors.WindowText;
-            dataGridViewCellStyle2.SelectionBackColor = SystemColors.Highlight;
-            dataGridViewCellStyle2.SelectionForeColor = SystemColors.HighlightText;
-            dataGridViewCellStyle2.WrapMode = DataGridViewTriState.True;
-            dataGridView1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle1.Alignment = DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle1.BackColor = SystemColors.Control;
+            dataGridViewCellStyle1.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point);
+            dataGridViewCellStyle1.ForeColor = SystemColors.WindowText;
+            dataGridViewCellStyle1.SelectionBackColor = SystemColors.Highlight;
+            dataGridViewCellStyle1.SelectionForeColor = SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = DataGridViewTriState.True;
+            dataGridView1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             dataGridView1.Columns.AddRange(new DataGridViewColumn[] { Produtos, Qtde, Unitário, Total });
             dataGridView1.Location = new Point(606, 192);
@@ -286,6 +297,7 @@
             dataGridView1.RowTemplate.Height = 25;
             dataGridView1.Size = new Size(403, 150);
             dataGridView1.TabIndex = 20;
+            dataGridView1.CellContentClick += dataGridView1_CellContentClick;
             // 
             // Produtos
             // 
@@ -316,6 +328,18 @@
             btn_adicionar.TabIndex = 21;
             btn_adicionar.Text = "Adicionar";
             btn_adicionar.UseVisualStyleBackColor = true;
+            btn_adicionar.Click += btn_adicionar_Click;
+            // 
+            // btn_limpar
+            // 
+            btn_limpar.Font = new Font("Segoe UI", 11.25F, FontStyle.Italic, GraphicsUnit.Point);
+            btn_limpar.Location = new Point(606, 348);
+            btn_limpar.Name = "btn_limpar";
+            btn_limpar.Size = new Size(116, 31);
+            btn_limpar.TabIndex = 22;
+            btn_limpar.Text = "Limpar";
+            btn_limpar.UseVisualStyleBackColor = true;
+            btn_limpar.Click += btn_limpar_Click;
             // 
             // PDVTela
             // 
@@ -324,15 +348,16 @@
             AutoSizeMode = AutoSizeMode.GrowAndShrink;
             BackColor = Color.FromArgb(255, 192, 255);
             ClientSize = new Size(1034, 450);
+            Controls.Add(btn_limpar);
             Controls.Add(btn_adicionar);
             Controls.Add(dataGridView1);
-            Controls.Add(textBox1);
+            Controls.Add(txb_codigo);
             Controls.Add(label5);
             Controls.Add(label4);
-            Controls.Add(numericUpDown1);
+            Controls.Add(txb_qtde);
             Controls.Add(btn_rf);
             Controls.Add(btn_cancelar);
-            Controls.Add(label3);
+            Controls.Add(lbl_ValorTotal);
             Controls.Add(label2);
             Controls.Add(label1);
             Controls.Add(pictureBox1);
@@ -343,10 +368,11 @@
             Name = "PDVTela";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "PDVTela";
+            Load += PDVTela_Load;
             groupBox1.ResumeLayout(false);
             groupBox2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
-            ((System.ComponentModel.ISupportInitialize)numericUpDown1).EndInit();
+            ((System.ComponentModel.ISupportInitialize)txb_qtde).EndInit();
             ((System.ComponentModel.ISupportInitialize)dataGridView1).EndInit();
             ResumeLayout(false);
             PerformLayout();
@@ -366,18 +392,19 @@
         private PictureBox pictureBox1;
         private Label label1;
         private Label label2;
-        private Label label3;
+        private Label lbl_ValorTotal;
         private Button btn_cancelar;
         private Button btn_rf;
-        private NumericUpDown numericUpDown1;
+        private NumericUpDown txb_qtde;
         private Label label4;
         private Label label5;
-        private TextBox textBox1;
+        private TextBox txb_codigo;
         private DataGridView dataGridView1;
         private DataGridViewTextBoxColumn Produtos;
         private DataGridViewTextBoxColumn Qtde;
         private DataGridViewTextBoxColumn Unitário;
         private DataGridViewTextBoxColumn Total;
         private Button btn_adicionar;
+        private Button btn_limpar;
     }
 }

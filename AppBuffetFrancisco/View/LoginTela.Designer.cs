@@ -104,7 +104,7 @@
             // 
             btn_sair.BackColor = Color.White;
             btn_sair.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point);
-            btn_sair.Location = new Point(413, 374);
+            btn_sair.Location = new Point(411, 374);
             btn_sair.Name = "btn_sair";
             btn_sair.Size = new Size(88, 30);
             btn_sair.TabIndex = 7;

@@ -62,7 +62,7 @@
             // sairToolStripMenuItem
             // 
             sairToolStripMenuItem.Name = "sairToolStripMenuItem";
-            sairToolStripMenuItem.Size = new Size(180, 22);
+            sairToolStripMenuItem.Size = new Size(93, 22);
             sairToolStripMenuItem.Text = "S&air";
             sairToolStripMenuItem.Click += sairToolStripMenuItem_Click;
             // 
@@ -77,7 +77,7 @@
             // 
             desfazerToolStripMenuItem.Name = "desfazerToolStripMenuItem";
             desfazerToolStripMenuItem.ShortcutKeys = Keys.Control | Keys.Z;
-            desfazerToolStripMenuItem.Size = new Size(180, 22);
+            desfazerToolStripMenuItem.Size = new Size(141, 22);
             desfazerToolStripMenuItem.Text = "&Abrir";
             desfazerToolStripMenuItem.Click += desfazerToolStripMenuItem_Click;
             // 
@@ -103,6 +103,7 @@
             pictureBox1.SizeMode = PictureBoxSizeMode.StretchImage;
             pictureBox1.TabIndex = 1;
             pictureBox1.TabStop = false;
+            pictureBox1.Click += pictureBox1_Click;
             // 
             // MenuTela
             // 
