@@ -114,9 +114,9 @@ namespace AppBuffetFrancisco.View
         private void btn_rf_Click(object sender, EventArgs e)
         {
             this.Hide();
-            TelaFecharVenda fiscal = new TelaFecharVenda();
-            fiscal.FormClosed += (s, args) => this.Close();
-            fiscal.Show();
+            TelaFecharVenda telaFecharVenda = new TelaFecharVenda(totalfinal);
+            telaFecharVenda.FormClosed += (s, args) => this.Close();
+            telaFecharVenda.Show();
         }
     }
 }

@@ -12,10 +12,11 @@ namespace AppBuffetFrancisco.View
 {
     public partial class TelaFecharVenda : Form
     {
+        private int totalfinal;
         public TelaFecharVenda(int totalfinal)
         {
-         
             InitializeComponent();
+            this.totalfinal = totalfinal;
         }
 
 
@@ -23,6 +24,7 @@ namespace AppBuffetFrancisco.View
         {
 
             lbl_data.Text = DateTime.Now.ToString();
+            lbl_totalfinal.Text = "R$" + totalfinal.ToString() + ",00";
         }
     }
 }
