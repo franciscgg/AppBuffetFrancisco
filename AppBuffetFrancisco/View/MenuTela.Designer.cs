@@ -113,6 +113,7 @@
             ClientSize = new Size(800, 450);
             Controls.Add(pictureBox1);
             Controls.Add(menuStrip1);
+            Icon = (Icon)resources.GetObject("$this.Icon");
             MainMenuStrip = menuStrip1;
             Name = "MenuTela";
             StartPosition = FormStartPosition.CenterScreen;
