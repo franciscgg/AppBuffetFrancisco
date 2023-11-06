@@ -10,3 +10,8 @@
 
 ![image](https://github.com/heelinho/AppBuffetFrancisco/assets/113110382/6f530965-0264-453a-bb6d-545aa74be4dc)
 
+# Tela de Cupom Fiscal
+
+![image](https://github.com/heelinho/AppBuffetFrancisco/assets/113110382/237e2974-bdf6-4054-ad23-5a3944a58830)
+
+
